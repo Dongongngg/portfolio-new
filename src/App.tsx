@@ -1,5 +1,8 @@
 import React from 'react';
+//mui
+import { CssBaseline } from '@material-ui/core';
 //components
+import NavBar from './components/NavBar';
 import Banner from './components/Banner';
 import ProjectHolder from './components/ProjectHolder';
 import WorkExpHolder from './components/WorkExpHolder';
@@ -7,8 +10,11 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>app</header>
+    <>
+      <CssBaseline />
+      <header>
+        <NavBar />
+      </header>
       <main>
         <Banner />
         <ProjectHolder />
@@ -16,7 +22,7 @@ const App: React.FC = () => {
         <Footer />
       </main>
       <footer></footer>
-    </div>
+    </>
   );
 };
 

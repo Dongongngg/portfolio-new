@@ -13,7 +13,7 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
-    node: true,
+    node: true
   },
   parserOptions: {
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
@@ -48,11 +48,10 @@ module.exports = {
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-      },
-    ],
+    "prettier/prettier": ["error", {
+     "endOfLine":"auto", 
+   }],
+    
+   
   },
 };
