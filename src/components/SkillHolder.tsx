@@ -1,21 +1,21 @@
 import React from 'react';
 //mui
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Container, Typography } from '@material-ui/core';
 //components
 import SubTitle from './Title';
 const useStyles = makeStyles((theme: Theme) => ({
-  root: {},
+  root: { backgroundColor: theme.palette.background.paper },
 }));
-const WorkExpHolder: React.FC = () => {
+const SkillHolder: React.FC = () => {
   const classes = useStyles();
   return (
     <section className={classes.root}>
       <Container maxWidth='lg'>
-        <SubTitle name={'Work Experience'} />
+        <SubTitle name={'My Skills'} />
       </Container>
     </section>
   );
 };
 
-export default WorkExpHolder;
+export default SkillHolder;

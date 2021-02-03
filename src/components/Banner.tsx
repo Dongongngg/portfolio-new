@@ -1,18 +1,45 @@
 import React from 'react';
-import { makeStyles, Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography, Avatar } from '@material-ui/core';
+import { makeStyles, Theme } from '@material-ui/core/styles';
+//mui icons
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
+import DescriptionIcon from '@material-ui/icons/Description';
+//img
+import avatar from '../assets/img/avatar.png';
 
-const useStyles = makeStyles({
-  root: {},
+const useStyles = makeStyles((theme: Theme) => ({
+  root: { padding: '4rem 0' },
+  name: { fontFamily: "'Roboto Slab', serif" },
+  role: { color: theme.palette.text.secondary },
   avatarWrapper: {
-    borderRight: '1px solid black',
+    borderRight: '1px solid #CCCCCC',
     '@media(max-width:960px)': {
-      borderBottom: '1px solid black',
+      borderBottom: '1px solid #CCCCCC',
       borderRight: 'none',
+      padding: '2rem 0',
     },
   },
-  introWrapper: {},
-  logoWrapper: { textAlign: 'center' },
-});
+  avatar: {
+    height: 250,
+    width: 250,
+    '@media(max-width:960px)': { height: 200, width: 200 },
+    marginBottom: '2rem',
+  },
+  introWrapper: {
+    '@media(max-width:960px)': {
+      padding: '2rem 0',
+    },
+  },
+  logoWrapper: {
+    paddingTop: '1rem',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItem: 'center',
+  },
+  socialLogo: { fontSize: '2.5rem' },
+}));
 
 const Banner: React.FC = () => {
   const classes = useStyles();
@@ -22,33 +49,34 @@ const Banner: React.FC = () => {
         <Grid container>
           <Grid item xs={12} md={4} className={classes.avatarWrapper}>
             <Container maxWidth='lg'>
-              {' '}
               <Grid
                 container
                 direction='column'
                 alignContent='center'
                 alignItems='center'
               >
-                <Typography>photo</Typography>
-
-                <Typography variant='h2' component='h1'>
+                <Avatar alt='Jingfu' src={avatar} className={classes.avatar} />
+                <Typography
+                  variant='h2'
+                  component='h1'
+                  className={classes.name}
+                >
                   Jingfu Dong
                 </Typography>
-                <Grid
-                  container
-                  alignContent='center'
-                  alignItems='center'
-                  spacing={2}
-                >
-                  <Grid item xs={4} className={classes.logoWrapper}>
-                    <Typography>Email</Typography>
-                  </Grid>
-                  <Grid item xs={4} className={classes.logoWrapper}>
-                    <Typography>GitHub</Typography>
-                  </Grid>
-                  <Grid item xs={4} className={classes.logoWrapper}>
-                    <Typography>LinkedIn</Typography>
-                  </Grid>
+                <Typography variant='h5' className={classes.role}>
+                  Junior web developer
+                </Typography>
+                <Grid container className={classes.logoWrapper}>
+                  <GitHubIcon color='primary' className={classes.socialLogo} />
+                  <LinkedInIcon
+                    color='primary'
+                    className={classes.socialLogo}
+                  />
+                  <EmailIcon color='primary' className={classes.socialLogo} />
+                  <DescriptionIcon
+                    color='primary'
+                    className={classes.socialLogo}
+                  />
                 </Grid>
               </Grid>
             </Container>
@@ -59,18 +87,22 @@ const Banner: React.FC = () => {
                 container
                 direction='column'
                 alignContent='center'
-                alignItems='center'
                 className={classes.introWrapper}
               >
                 <Typography variant='h2'>About me</Typography>
-                <Typography variant='h4' component='p'>
-                  I live in Sydney, I&apos;m passionate about web development.
+                <Typography variant='h5' component='p'>
+                  I am a self-motivated front-end developer passionate about web
+                  development, primarily JavaScript/TypeScript.
                 </Typography>
-                <Typography variant='h4' component='p'>
-                  I live in Sydney, I&apos;m passionate about web development.
+                <Typography variant='h5' component='p'>
+                  Development job has never been just a job for me, it is a
+                  lifestyle that offered engaging challenges to continuous
+                  learning and improvement of my skills. I am keen on learning.
                 </Typography>
-                <Typography variant='h4' component='p'>
-                  I live in Sydney, I&apos;m passionate about web development.
+                <Typography variant='h5' component='p'>
+                  I care about clean code and keen on improving my skills. I’m
+                  looking for the right opportunity to work in an environment
+                  that I can contribute to the projects that make me proud.
                 </Typography>
               </Grid>
             </Container>

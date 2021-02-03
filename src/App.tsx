@@ -4,8 +4,9 @@ import { CssBaseline } from '@material-ui/core';
 //components
 import NavBar from './components/NavBar';
 import Banner from './components/Banner';
-import ProjectHolder from './components/ProjectHolder';
+import SkillHolder from './components/SkillHolder';
 import WorkExpHolder from './components/WorkExpHolder';
+import ProjectHolder from './components/ProjectHolder';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -17,8 +18,9 @@ const App: React.FC = () => {
       </header>
       <main>
         <Banner />
-        <ProjectHolder />
+        <SkillHolder />
         <WorkExpHolder />
+        <ProjectHolder />
         <Footer />
       </main>
       <footer></footer>
