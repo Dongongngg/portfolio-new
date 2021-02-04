@@ -29,7 +29,8 @@ let theme = createMuiTheme({
     //  h2: subtitle
     h2: { marginBottom: '1rem', fontFamily: "'Roboto Slab', serif" },
     h3: { fontWeight: 500, margin: '0.5rem 0' },
-    h4: { fontWeight: 500, margin: '0.5rem 0' },
+    // h4: 3rd title
+    h4: { fontWeight: 500 },
     //  h5: content, display as p
     h5: {
       fontWeight: 500,

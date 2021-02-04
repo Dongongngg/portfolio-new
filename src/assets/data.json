@@ -1,0 +1,15 @@
+{
+  "language": ["HTML", "(S)CSS", "JavaScript(ES6)", "TypeScript"],
+  "frontend": [
+    "React",
+    "Graphql",
+    "Gatsby",
+    "WordPress",
+    "Material UI",
+    "BootStrap"
+  ],
+  "backend": ["NodeJS", "Express", "Apollo Server"],
+  "database": ["MySQL", "MongoDB"],
+  "devops": ["Docker"],
+  "version": ["Git", "GitHub"]
+}

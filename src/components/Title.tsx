@@ -3,8 +3,7 @@ import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
-  root: {},
-  name: { padding: `${theme.spacing(4)}px 0` },
+  root: { paddingBottom: theme.spacing(10) },
 }));
 
 interface MyProps {
@@ -14,13 +13,9 @@ interface MyProps {
 const Title: React.FC<MyProps> = (props: MyProps) => {
   const classes = useStyles();
   return (
-    <section className={classes.root}>
-      <Container maxWidth='lg'>
-        <Typography variant='h2' className={classes.name}>
-          {props.name}
-        </Typography>
-      </Container>
-    </section>
+    <Container maxWidth='lg' className={classes.root}>
+      <Typography variant='h2'>{props.name}</Typography>
+    </Container>
   );
 };
 
