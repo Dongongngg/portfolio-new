@@ -52,11 +52,6 @@ let theme: Theme = createMuiTheme({
     h6: { fontFamily: "'Catamaran', sans-serif" },
     body1: { fontFamily: "'Catamaran', sans-serif" },
     body2: { fontFamily: "'Roboto Slab', serif" },
-    // fontFamily: [
-    //   "'Source Sans Pro', sans-serif",
-    //   "'Yusei Magic', sans-serif",
-    //   "'Arvo', serif",
-    // ].join(','),
   },
 });
 

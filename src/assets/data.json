@@ -37,21 +37,50 @@
         "company":"Forexco. Management",
         "date":"Feb 2021 - Present",
         "location":"Wynyard",
-        "desc":["Develop, test, implement and maintain new user-facing features","Build and integrate APIs for various systems","Design, develop and enhance automated reports for internal and external stakeholders","Resolve coding issues, develop additional features and bug-fixes"]
+        "desc":[
+           "Develop, test, implement and maintain new user-facing features",
+           "Build and integrate APIs for various systems",
+           "Design, develop and enhance automated reports for internal and external stakeholders",
+           "Resolve coding issues, develop additional features and bug-fixes"
+        ]
      },
      {
         "title":"Full-stack developer intern",
         "company":"iShare Incubater",
         "date":"May 2020 - Aug 2020",
         "location":"Wynyard",
-        "desc":["Working within a team to build property management web application","Creating functional page and components, coding correlative front-end and back-end, design database","Optimizating business processes"]
+        "desc":[
+           "Working within a team to build property management web application",
+           "Creating functional page and components, coding correlative front-end and back-end, design database",
+           "Optimizating business processes"
+        ]
      },
      {
         "title":"Front-end developer intern",
         "company":"NetStripes",
         "date":"Oct 2018 - Jan 2019",
         "location":"Pyrmont",
-        "desc":["Assisting WordPress theme development based on designs","Administrating integrations with other platforms, managing website’s plugins","Contribution of digital transformation solutions","General IT troubleshooting"]
+        "desc":[
+           "Assisting WordPress theme development based on designs",
+           "Administrating integrations with other platforms, managing website’s plugins",
+           "Contribution of digital transformation solutions",
+           "General IT troubleshooting"
+        ]
+     }
+  ],
+  "project":[
+     {
+        "title":"asdad",
+        "desc":[
+           "ada",
+           "adad"
+        ],
+        "live":"",
+        "github":"",
+        "tech":[
+           "a",
+           "b"
+        ]
      }
   ]
 }

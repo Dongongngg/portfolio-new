@@ -122,6 +122,16 @@ const Banner: React.FC = () => {
                     className={classes.about}
                   >
                     JavaScript/TypeScript
+                  </Typography>{' '}
+                  +{' '}
+                  <Typography
+                    color='secondary'
+                    variant='h5'
+                    component='span'
+                    display='inline'
+                    className={classes.about}
+                  >
+                    NodeJS
                   </Typography>
                   .
                 </Typography>

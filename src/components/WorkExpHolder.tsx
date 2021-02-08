@@ -55,17 +55,14 @@ const MyPaper = withStyles((theme: Theme) => ({
   root: {
     padding: theme.spacing(2),
     border: `2px solid ${theme.palette.secondary.main}`,
-    // '&:hover': {
-    //   border: `5px solid ${theme.palette.primary.main}`,
-    // },
   },
 }))(Paper);
 
 interface MyTimeLineProps {
   title: string;
-  company: string;
+  company?: string;
   date: string;
-  location: string;
+  location?: string;
   desc: string[];
 }
 
