@@ -3,7 +3,12 @@ import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
-  root: { paddingBottom: theme.spacing(10) },
+  root: {
+    paddingBottom: theme.spacing(10),
+    '@media(max-width:960px)': {
+      paddingBottom: theme.spacing(4),
+    },
+  },
 }));
 
 interface MyProps {

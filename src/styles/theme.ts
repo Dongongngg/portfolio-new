@@ -23,21 +23,22 @@ let theme = createMuiTheme({
     fontSize: 14,
     //  h1: title
     h1: {
-      margin: '0.75rem 0',
+      marginBottom: '0.75rem',
       fontFamily: "'Roboto Slab', serif",
     },
     //  h2: subtitle
-    h2: { marginBottom: '1rem', fontFamily: "'Roboto Slab', serif" },
-    h3: { fontWeight: 500, margin: '0.5rem 0' },
+    h2: { marginBottom: '1.5rem', fontFamily: "'Roboto Slab', serif" },
+    h3: { fontWeight: 500, marginBottom: '0.5rem' },
     // h4: 3rd title
     h4: { fontWeight: 500 },
     //  h5: content, display as p
     h5: {
       fontWeight: 500,
-      margin: '0.5rem 0',
+      lineHeight: 1.5,
+      marginBottom: '0.5rem',
       fontFamily: "'Catamaran', sans-serif",
     },
-    body1: { margin: '0.5rem 0' },
+    body1: {},
     subtitle1: { color: 'rgba(0,0,0,0.54)' },
     // fontFamily: [
     //   "'Source Sans Pro', sans-serif",

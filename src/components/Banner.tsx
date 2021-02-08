@@ -10,7 +10,14 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import avatar from '../assets/img/avatar.png';
 
 const useStyles = makeStyles((theme: Theme) => ({
-  root: { padding: '4rem 0' },
+  root: {
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(12),
+    '@media(max-width:960px)': {
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
+    },
+  },
   name: { fontFamily: "'Roboto Slab', serif" },
   role: { color: theme.palette.text.secondary },
   avatarWrapper: {
@@ -24,7 +31,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   avatar: {
     height: 250,
     width: 250,
-    '@media(max-width:960px)': { height: 200, width: 200 },
+    '@media(max-width:960px)': {
+      height: 200,
+      width: 200,
+      marginBottom: '1rem',
+    },
     marginBottom: '2rem',
   },
   introWrapper: {
@@ -64,7 +75,7 @@ const Banner: React.FC = () => {
                   Jingfu Dong
                 </Typography>
                 <Typography variant='h5' className={classes.role}>
-                  Junior web developer
+                  Junior full-stack developer
                 </Typography>
                 <Grid container className={classes.logoWrapper}>
                   <GitHubIcon color='primary' className={classes.socialLogo} />

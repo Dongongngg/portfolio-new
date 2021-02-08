@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.palette.background.paper,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(12),
+    '@media(max-width:960px)': {
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(6),
+    },
   },
   typeWrapper: { padding: '1rem 0' },
   typeTitleWrapper: {
@@ -39,7 +43,7 @@ const SkillHolder: React.FC = () => {
             <Grid container>
               <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
                 <Container maxWidth='lg'>
-                  <CodeIcon fontSize='large' />
+                  <CodeIcon fontSize='large' color='secondary' />
                   <Typography variant='h4' className={classes.title}>
                     Language
                   </Typography>
@@ -47,7 +51,7 @@ const SkillHolder: React.FC = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <Container maxWidth='lg'>
-                  {data.language.map((e, i) => (
+                  {data.skill.language.map((e, i) => (
                     <Typography key={i} variant='h5'>
                       {e}
                     </Typography>
@@ -60,15 +64,15 @@ const SkillHolder: React.FC = () => {
             <Grid container>
               <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
                 <Container maxWidth='lg'>
-                  <FlipToFrontIcon fontSize='large' />
+                  <FlipToFrontIcon fontSize='large' color='secondary' />
                   <Typography variant='h4' className={classes.title}>
-                    Front end
+                    Front-end
                   </Typography>
                 </Container>
               </Grid>
               <Grid item xs={6} md={8}>
                 <Container maxWidth='lg'>
-                  {data.frontend.map((e, i) => (
+                  {data.skill.frontend.map((e, i) => (
                     <Typography key={i} variant='h5'>
                       {e}
                     </Typography>
@@ -81,15 +85,15 @@ const SkillHolder: React.FC = () => {
             <Grid container>
               <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
                 <Container maxWidth='lg'>
-                  <FlipToBackIcon fontSize='large' />
+                  <FlipToBackIcon fontSize='large' color='secondary' />
                   <Typography variant='h4' className={classes.title}>
-                    Back end
+                    Back-end
                   </Typography>
                 </Container>
               </Grid>
               <Grid item xs={6} md={8}>
                 <Container maxWidth='lg'>
-                  {data.backend.map((e, i) => (
+                  {data.skill.backend.map((e, i) => (
                     <Typography key={i} variant='h5'>
                       {e}
                     </Typography>
@@ -102,7 +106,7 @@ const SkillHolder: React.FC = () => {
             <Grid container>
               <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
                 <Container maxWidth='lg'>
-                  <StorageIcon fontSize='large' />
+                  <StorageIcon fontSize='large' color='secondary' />
                   <Typography variant='h4' className={classes.title}>
                     Database
                   </Typography>
@@ -110,7 +114,7 @@ const SkillHolder: React.FC = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <Container maxWidth='lg'>
-                  {data.database.map((e, i) => (
+                  {data.skill.database.map((e, i) => (
                     <Typography key={i} variant='h5'>
                       {e}
                     </Typography>
@@ -123,7 +127,7 @@ const SkillHolder: React.FC = () => {
             <Grid container>
               <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
                 <Container maxWidth='lg'>
-                  <UpdateIcon fontSize='large' />
+                  <UpdateIcon fontSize='large' color='secondary' />
                   <Typography variant='h4' className={classes.title}>
                     Version
                   </Typography>
@@ -131,7 +135,7 @@ const SkillHolder: React.FC = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <Container maxWidth='lg'>
-                  {data.version.map((e, i) => (
+                  {data.skill.version.map((e, i) => (
                     <Typography key={i} variant='h5'>
                       {e}
                     </Typography>
@@ -144,7 +148,7 @@ const SkillHolder: React.FC = () => {
             <Grid container>
               <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
                 <Container maxWidth='lg'>
-                  <BuildIcon fontSize='large' />
+                  <BuildIcon fontSize='large' color='secondary' />
                   <Typography variant='h4' className={classes.title}>
                     Devops
                   </Typography>
@@ -152,7 +156,7 @@ const SkillHolder: React.FC = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <Container maxWidth='lg'>
-                  {data.devops.map((e, i) => (
+                  {data.skill.devops.map((e, i) => (
                     <Typography key={i} variant='h5'>
                       {e}
                     </Typography>
