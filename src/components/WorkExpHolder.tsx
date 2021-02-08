@@ -15,6 +15,7 @@ import {
 import SubTitle from './Title';
 //data
 import data from '../assets/data.json';
+
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     paddingTop: theme.spacing(10),
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme: Theme) => ({
       paddingBottom: theme.spacing(6),
     },
   },
-  timeLineWrapper: { '& > h5[MuiTypography-h5]': { margin: 0 } },
 }));
 
 const timeLineStyles = makeStyles(theme => ({
@@ -32,12 +32,15 @@ const timeLineStyles = makeStyles(theme => ({
     padding: `${theme.spacing(2)}px ${theme.spacing(3)}px`,
     '@media(max-width:960px)': { padding: `${theme.spacing(2)}px 0` },
   },
-  title: { marginBottom: 0, fontWeight: 600 },
+  title: { fontWeight: 600 },
   desc: {
     marginTop: '0.5rem !important',
     listStyleType: 'circle !important',
     paddingInlineStart: '1rem !important',
   },
+  contentWrapper: { padding: '10px 16px' },
+  dot: { padding: '0.5vw' },
+  connector: { backgroundColor: theme.palette.divider },
 }));
 
 const TimeLineItemFluid = withStyles({
@@ -49,7 +52,13 @@ const TimeLineItemFluid = withStyles({
 })(TimelineItem);
 
 const MyPaper = withStyles((theme: Theme) => ({
-  root: { padding: theme.spacing(2) },
+  root: {
+    padding: theme.spacing(2),
+    border: `2px solid ${theme.palette.secondary.main}`,
+    // '&:hover': {
+    //   border: `5px solid ${theme.palette.primary.main}`,
+    // },
+  },
 }))(Paper);
 
 interface MyTimeLineProps {
@@ -72,11 +81,11 @@ const MyTimeLineItem: React.FC<MyTimeLineProps> = (props: MyTimeLineProps) => {
         </TimelineOppositeContent>
       </Hidden>
       <TimelineSeparator>
-        <TimelineDot color='secondary' />
-        <TimelineConnector />
+        <TimelineDot color='primary' className={classes.dot} />
+        <TimelineConnector className={classes.connector} />
       </TimelineSeparator>
-      <TimelineContent>
-        <MyPaper>
+      <TimelineContent className={classes.contentWrapper}>
+        <MyPaper elevation={0}>
           <Typography variant='h5' className={classes.title}>
             {props.title}
           </Typography>
@@ -114,7 +123,7 @@ const WorkExpHolder: React.FC = () => {
         <SubTitle name={'Work Experience'} />
         <Grid container>
           <Grid item xs={12} md={12}>
-            <Timeline className={classes.timeLineWrapper}>
+            <Timeline>
               {data.work.map((e, i) => (
                 <MyTimeLineItem key={i} {...e} />
               ))}

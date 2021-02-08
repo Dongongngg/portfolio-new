@@ -1,22 +1,29 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  responsiveFontSizes,
+  Theme,
+} from '@material-ui/core/styles';
 
-let theme = createMuiTheme({
+let theme: Theme = createMuiTheme({
   spacing: 8,
   palette: {
     text: {
-      primary: '#313131',
-      secondary: 'rgba(0, 0, 0, 0.54)',
+      primary: '#333',
+      secondary: '#787586',
+      disabled: 'rgba(255,255,255,.8)',
     },
     primary: {
-      main: '#32325d',
+      main: '#A06C90',
       light: '#636090',
     },
     secondary: {
-      main: '#00C895',
+      main: '#5CB7B1',
+      light: '#C8FCEA',
     },
+    divider: '#787586',
     background: {
       default: '#fff',
-      paper: '#f7f7f7',
+      paper: '#f8f8f8',
     },
   },
   typography: {
@@ -28,18 +35,23 @@ let theme = createMuiTheme({
     },
     //  h2: subtitle
     h2: { marginBottom: '1.5rem', fontFamily: "'Roboto Slab', serif" },
-    h3: { fontWeight: 500, marginBottom: '0.5rem' },
-    // h4: 3rd title
-    h4: { fontWeight: 500 },
-    //  h5: content, display as p
+    h3: {
+      fontWeight: 500,
+      marginBottom: '0.5rem',
+      fontFamily: "'Roboto Slab', serif",
+    },
+    //  h4: 3rd title
+    h4: { fontWeight: 500, fontFamily: "'Roboto Slab', serif" },
+    //  h5: card title or non-paper/card content, display as p
     h5: {
       fontWeight: 500,
       lineHeight: 1.5,
-      marginBottom: '0.5rem',
       fontFamily: "'Catamaran', sans-serif",
     },
-    body1: {},
-    subtitle1: { color: 'rgba(0,0,0,0.54)' },
+    //  h6: card sub-title
+    h6: { fontFamily: "'Catamaran', sans-serif" },
+    body1: { fontFamily: "'Catamaran', sans-serif" },
+    body2: { fontFamily: "'Roboto Slab', serif" },
     // fontFamily: [
     //   "'Source Sans Pro', sans-serif",
     //   "'Yusei Magic', sans-serif",

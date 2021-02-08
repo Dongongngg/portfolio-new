@@ -6,6 +6,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import DescriptionIcon from '@material-ui/icons/Description';
+import SchoolIcon from '@material-ui/icons/School';
 //img
 import avatar from '../assets/img/avatar.png';
 
@@ -21,9 +22,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   name: { fontFamily: "'Roboto Slab', serif" },
   role: { color: theme.palette.text.secondary },
   avatarWrapper: {
-    borderRight: '1px solid #CCCCCC',
+    borderRight: `2px solid ${theme.palette.divider}`,
     '@media(max-width:960px)': {
-      borderBottom: '1px solid #CCCCCC',
+      borderBottom: `2px solid ${theme.palette.divider}`,
       borderRight: 'none',
       padding: '2rem 0',
     },
@@ -31,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   avatar: {
     height: 250,
     width: 250,
+    border: `4px solid ${theme.palette.secondary.main}`,
     '@media(max-width:960px)': {
       height: 200,
       width: 200,
@@ -43,6 +45,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: '2rem 0',
     },
   },
+  about: {
+    marginBottom: '0.5rem',
+  },
   logoWrapper: {
     paddingTop: '1rem',
     display: 'flex',
@@ -50,6 +55,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItem: 'center',
   },
   socialLogo: { fontSize: '2.5rem' },
+  eduWrapper: { marginTop: '1rem' },
 }));
 
 const Banner: React.FC = () => {
@@ -101,20 +107,60 @@ const Banner: React.FC = () => {
                 className={classes.introWrapper}
               >
                 <Typography variant='h2'>About me</Typography>
-                <Typography variant='h5' component='p'>
-                  I am a self-motivated front-end developer passionate about web
-                  development, primarily JavaScript/TypeScript.
+                <Typography
+                  variant='h5'
+                  component='p'
+                  className={classes.about}
+                >
+                  I am a self-motivated full-stack developer passionate about
+                  web development, primarily{' '}
+                  <Typography
+                    color='secondary'
+                    variant='h5'
+                    component='span'
+                    display='inline'
+                    className={classes.about}
+                  >
+                    JavaScript/TypeScript
+                  </Typography>
+                  .
                 </Typography>
-                <Typography variant='h5' component='p'>
+                <Typography
+                  variant='h5'
+                  component='p'
+                  className={classes.about}
+                >
                   Development job has never been just a job for me, it is a
                   lifestyle that offered engaging challenges to continuous
                   learning and improvement of my skills. I am keen on learning.
                 </Typography>
-                <Typography variant='h5' component='p'>
+                <Typography
+                  variant='h5'
+                  component='p'
+                  className={classes.about}
+                >
                   I care about clean code and keen on improving my skills. I’m
-                  looking for the right opportunity to work in an environment
-                  that I can contribute to the projects that make me proud.
+                  looking for the right opportunity to contribute to the
+                  projects that make me proud.
                 </Typography>
+
+                <Grid container>
+                  <Grid item xs={12} sm={6} className={classes.eduWrapper}>
+                    <SchoolIcon />
+                    <Typography variant='h5'>Master of IT, 2017</Typography>
+                    <Typography color='textSecondary' variant='h6'>
+                      University of Wollongong, Wollongong
+                    </Typography>
+                    <Typography variant='h6'>Enterprise Network</Typography>
+                  </Grid>
+                  <Grid item xs={12} sm={6} className={classes.eduWrapper}>
+                    <SchoolIcon />
+                    <Typography variant='h5'>Bachelor of IT, 2015</Typography>
+                    <Typography color='textSecondary' variant='h6'>
+                      Beijing University of Technology, Beijing
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Grid>
             </Container>
           </Grid>

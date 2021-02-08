@@ -23,11 +23,14 @@ const useStyles = makeStyles((theme: Theme) => ({
       paddingBottom: theme.spacing(6),
     },
   },
-  typeWrapper: { padding: '1rem 0' },
+  typeWrapper: {
+    padding: '1rem 0',
+  },
   typeTitleWrapper: {
     textAlign: 'center',
-    borderRight: '1px solid #CCCCCC',
+    borderRight: `2px solid ${theme.palette.divider}`,
   },
+
   title: {},
   typeContentWrapper: {},
 }));
