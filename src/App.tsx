@@ -1,6 +1,8 @@
 import React from 'react';
 //mui
 import { CssBaseline } from '@material-ui/core';
+//layout
+import PortfolioLayout from './layouts/Portfolio';
 //components
 import NavBar from './components/NavBar';
 import Banner from './components/Banner';
@@ -16,14 +18,31 @@ const App: React.FC = () => {
       <header>
         <NavBar />
       </header>
-      <main>
-        <Banner />
-        <SkillHolder />
-        <WorkExpHolder />
-        <ProjectHolder />
+      {/* <main>
+        <PortfolioLayout>
+          <Banner />
+        </PortfolioLayout>
+        <PortfolioLayout>
+          <SkillHolder />
+        </PortfolioLayout>
+        <PortfolioLayout>
+          <WorkExpHolder />
+        </PortfolioLayout>
+        <PortfolioLayout>
+          <ProjectHolder />
+        </PortfolioLayout>
+      </main> */}
+
+      <PortfolioLayout
+        banner={<Banner />}
+        skill={<SkillHolder />}
+        work={<WorkExpHolder />}
+        project={<ProjectHolder />}
+      />
+
+      <footer>
         <Footer />
-      </main>
-      <footer></footer>
+      </footer>
     </>
   );
 };

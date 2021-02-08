@@ -17,14 +17,7 @@ import SubTitle from './Title';
 import data from '../assets/data.json';
 
 const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(12),
-    '@media(max-width:960px)': {
-      paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(6),
-    },
-  },
+  root: {},
 }));
 
 const timeLineStyles = makeStyles(theme => ({
