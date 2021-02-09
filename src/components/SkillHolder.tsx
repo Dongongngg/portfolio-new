@@ -30,7 +30,7 @@ const SkillHolder: React.FC = () => {
   const classes = useStyles();
   return (
     <Container maxWidth='lg'>
-      <SubTitle name={'My Skills'} />
+      <SubTitle name='My Skills' />
       <Grid container>
         <Grid item xs={12} md={6} className={classes.typeWrapper}>
           <Grid container>

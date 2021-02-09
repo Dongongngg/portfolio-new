@@ -17,7 +17,10 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       padding: 0,
     },
-    appBar: { color: theme.palette.text.disabled },
+    appBar: {
+      color: theme.palette.text.disabled,
+      backgroundColor: theme.palette.text.primary,
+    },
     title: {
       flexGrow: 1,
     },
@@ -28,7 +31,7 @@ const NavBar: React.FC = () => {
   const classes = useStyles();
   return (
     <Container maxWidth={false} className={classes.root}>
-      <AppBar position='static' color='secondary' className={classes.appBar}>
+      <AppBar position='static' className={classes.appBar}>
         <Toolbar>
           <Hidden smUp>
             <MenuIcon />

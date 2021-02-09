@@ -7,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import DescriptionIcon from '@material-ui/icons/Description';
 import SchoolIcon from '@material-ui/icons/School';
-//img
+//assets
 import avatar from '../assets/img/avatar.png';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'space-evenly',
     alignItem: 'center',
   },
-  socialLogo: { fontSize: '2.5rem' },
+  socialLogo: { fontSize: '2.5rem', cursor: 'pointer' },
+  socialLogo2: { fontSize: '2.75rem', cursor: 'pointer' },
   eduWrapper: { marginTop: '1rem' },
 }));
 
@@ -72,12 +73,35 @@ const Banner: React.FC = () => {
                 Junior full-stack developer
               </Typography>
               <Grid container className={classes.logoWrapper}>
-                <GitHubIcon color='primary' className={classes.socialLogo} />
-                <LinkedInIcon color='primary' className={classes.socialLogo} />
-                <EmailIcon color='primary' className={classes.socialLogo} />
+                <GitHubIcon
+                  color='primary'
+                  className={classes.socialLogo}
+                  onClick={() => {
+                    window.open('https://github.com/Dongongngg');
+                  }}
+                />
+                <LinkedInIcon
+                  color='primary'
+                  className={classes.socialLogo2}
+                  onClick={() => {
+                    window.open(
+                      'https://www.linkedin.com/in/jingfu-dong-james/',
+                    );
+                  }}
+                />
+                <EmailIcon
+                  color='primary'
+                  className={classes.socialLogo2}
+                  onClick={() => {
+                    window.open('mailto:jingfu.dong0320@gmail.com');
+                  }}
+                />
                 <DescriptionIcon
                   color='primary'
                   className={classes.socialLogo}
+                  onClick={() => {
+                    window.open('Resume_Jingfu_Dong.pdf');
+                  }}
                 />
               </Grid>
             </Grid>

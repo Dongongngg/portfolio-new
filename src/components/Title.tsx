@@ -4,9 +4,9 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    paddingBottom: theme.spacing(10),
+    paddingBottom: theme.spacing(8),
     '@media(max-width:960px)': {
-      paddingBottom: theme.spacing(4),
+      paddingBottom: theme.spacing(2),
     },
   },
 }));

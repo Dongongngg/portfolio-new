@@ -16,10 +16,6 @@ import SubTitle from './Title';
 //data
 import data from '../assets/data.json';
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {},
-}));
-
 const timeLineStyles = makeStyles(theme => ({
   root: {
     padding: `${theme.spacing(2)}px ${theme.spacing(3)}px`,
@@ -106,22 +102,19 @@ const MyTimeLineItem: React.FC<MyTimeLineProps> = (props: MyTimeLineProps) => {
 };
 
 const WorkExpHolder: React.FC = () => {
-  const classes = useStyles();
   return (
-    <section className={classes.root}>
-      <Container maxWidth='lg'>
-        <SubTitle name={'Work Experience'} />
-        <Grid container>
-          <Grid item xs={12} md={12}>
-            <Timeline>
-              {data.work.map((e, i) => (
-                <MyTimeLineItem key={i} {...e} />
-              ))}
-            </Timeline>
-          </Grid>
+    <Container maxWidth='lg'>
+      <SubTitle name='Work Experience' />
+      <Grid container>
+        <Grid item xs={12} md={12}>
+          <Timeline>
+            {data.work.map((e, i) => (
+              <MyTimeLineItem key={i} {...e} />
+            ))}
+          </Timeline>
         </Grid>
-      </Container>
-    </section>
+      </Grid>
+    </Container>
   );
 };
 

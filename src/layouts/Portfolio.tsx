@@ -1,29 +1,3 @@
-// import React from 'react';
-// //mui
-// import { makeStyles } from '@material-ui/core/styles';
-
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     paddingTop: theme.spacing(10),
-//     paddingBottom: theme.spacing(12),
-//     '@media(max-width:960px)': {
-//       paddingTop: theme.spacing(5),
-//       paddingBottom: theme.spacing(6),
-//     },
-//   },
-// }));
-
-// interface MyProps {
-//   children: React.FC;
-// }
-
-// const Portfolio: React.FC = (props: MyProps) => {
-//   const classes = useStyles();
-//   return (
-//       <section className={classes.root}>{props.banner}</section>
-//   );
-// };
-// export default Portfolio;
 import React from 'react';
 //mui
 import { makeStyles } from '@material-ui/core/styles';
@@ -40,13 +14,6 @@ const useStyles = makeStyles(theme => ({
   skill: { backgroundColor: theme.palette.background.paper },
   project: { backgroundColor: theme.palette.background.paper },
 }));
-
-// interface MyProps {
-//   banner?: React.FC;
-//   skill?: React.FC;
-//   work?: React.FC;
-//   project?: React.FC;
-// }
 
 interface MyProps {
   banner?: React.ReactNode;
