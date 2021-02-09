@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   navWrapper: {
     paddingTop: theme.spacing(10),
+    '@media(max-width:960px)': { paddingTop: theme.spacing(5) },
     paddingBottom: theme.spacing(5),
     display: 'flex',
     justifyContent: 'space-between',
