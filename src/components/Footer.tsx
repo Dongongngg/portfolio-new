@@ -19,22 +19,52 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  icon: { cursor: 'pointer' },
+  claim: {
+    '@media(max-width:960px)': {
+      textAlign: 'center',
+    },
+  },
 }));
 const Footer: React.FC = () => {
   const classes = useStyles();
   return (
     <Container maxWidth={false} className={classes.root}>
       <Container maxWidth='sm' className={classes.navWrapper}>
-        <GitHubIcon fontSize='large' />
-        <LinkedInIcon fontSize='large' />
-        <EmailIcon fontSize='large' />
-        <DescriptionIcon fontSize='large' />
+        <GitHubIcon
+          fontSize='large'
+          className={classes.icon}
+          onClick={() => {
+            window.open('https://github.com/Dongongngg');
+          }}
+        />
+        <LinkedInIcon
+          fontSize='large'
+          className={classes.icon}
+          onClick={() => {
+            window.open('https://www.linkedin.com/in/jingfu-dong-james/');
+          }}
+        />
+        <EmailIcon
+          fontSize='large'
+          className={classes.icon}
+          onClick={() => {
+            window.open('mailto:jingfu.dong0320@gmail.com');
+          }}
+        />
+        <DescriptionIcon
+          fontSize='large'
+          className={classes.icon}
+          onClick={() => {
+            window.open('Resume_Jingfu_Dong.pdf');
+          }}
+        />
       </Container>
 
       <Typography variant='h5' align='center'>
         © Jingfu Dong
       </Typography>
-      <Typography variant='body1' align='right'>
+      <Typography variant='body1' align='right' className={classes.claim}>
         Design inspired by{' '}
         <Typography component='a' href='https://manparvesh.com/'>
           Man Parvesh Singh Randhawa

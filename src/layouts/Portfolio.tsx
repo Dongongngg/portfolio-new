@@ -11,6 +11,14 @@ const useStyles = makeStyles(theme => ({
       paddingBottom: theme.spacing(6),
     },
   },
+  banner: {
+    paddingTop: theme.spacing(16),
+    paddingBottom: theme.spacing(12),
+    '@media(max-width:960px)': {
+      paddingTop: theme.spacing(11),
+      paddingBottom: theme.spacing(6),
+    },
+  },
   skill: { backgroundColor: theme.palette.background.paper },
   project: { backgroundColor: theme.palette.background.paper },
 }));
@@ -26,12 +34,19 @@ const Portfolio: React.FC<MyProps> = (props: MyProps) => {
   const classes = useStyles();
   return (
     <main>
-      <section className={classes.root}>{props.banner}</section>
-      <section className={`${classes.root} ` + `${classes.skill}`}>
+      <section id='about' className={classes.banner}>
+        {props.banner}
+      </section>
+      <section id='skill' className={`${classes.root} ` + `${classes.skill}`}>
         {props.skill}
       </section>
-      <section className={classes.root}>{props.work}</section>
-      <section className={`${classes.root} ` + `${classes.project}`}>
+      <section id='work' className={classes.root}>
+        {props.work}
+      </section>
+      <section
+        id='projects'
+        className={`${classes.root} ` + `${classes.project}`}
+      >
         {props.project}
       </section>
     </main>

@@ -31,17 +31,24 @@ let theme: Theme = createMuiTheme({
     //  h1: title
     h1: {
       marginBottom: '0.75rem',
+
       fontFamily: "'Roboto Slab', serif",
     },
     //  h2: subtitle
-    h2: { marginBottom: '1.5rem', fontFamily: "'Roboto Slab', serif" },
+    h2: {
+      marginBottom: '1.5rem',
+      fontFamily: "'Roboto Slab', serif",
+      '@media(max-width:960px)': {
+        marginBottom: '1rem',
+      },
+    },
     h3: {
       fontWeight: 500,
       marginBottom: '0.5rem',
       fontFamily: "'Roboto Slab', serif",
     },
     //  h4: 3rd title
-    h4: { fontWeight: 500, fontFamily: "'Roboto Slab', serif" },
+    h4: { fontWeight: 500, fontFamily: "'Catamaran', sans-serif" },
     //  h5: card title or non-paper/card content, display as p
     h5: {
       fontWeight: 500,

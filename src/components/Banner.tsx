@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '@media(max-width:960px)': {
       borderBottom: `2px solid ${theme.palette.divider}`,
       borderRight: 'none',
-      padding: '2rem 0',
+      paddingBottom: theme.spacing(4),
     },
   },
   avatar: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   introWrapper: {
     '@media(max-width:960px)': {
-      padding: '2rem 0',
+      paddingTop: theme.spacing(4),
     },
   },
   about: {
