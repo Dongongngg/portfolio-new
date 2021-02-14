@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     '@media(max-width:960px)': {
       height: 200,
       width: 200,
-      marginBottom: '1rem',
+      marginBottom: theme.spacing(4),
     },
-    marginBottom: '2rem',
+    marginBottom: theme.spacing(8),
   },
   introWrapper: {
     '@media(max-width:960px)': {
@@ -39,17 +39,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   about: {
-    marginBottom: '0.5rem',
+    marginBottom: theme.spacing(2),
   },
   logoWrapper: {
-    paddingTop: '1rem',
+    paddingTop: theme.spacing(3),
     display: 'flex',
     justifyContent: 'space-evenly',
     alignItem: 'center',
   },
   socialLogo: { fontSize: '2.5rem', cursor: 'pointer' },
   socialLogo2: { fontSize: '2.75rem', cursor: 'pointer' },
-  eduWrapper: { marginTop: '1rem' },
+  eduWrapper: { marginTop: theme.spacing(2) },
 }));
 
 const Banner: React.FC = () => {

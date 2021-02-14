@@ -31,7 +31,6 @@ let theme: Theme = createMuiTheme({
     //  h1: title
     h1: {
       marginBottom: '0.75rem',
-
       fontFamily: "'Roboto Slab', serif",
     },
     //  h2: subtitle

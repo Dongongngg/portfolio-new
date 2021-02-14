@@ -15,7 +15,8 @@ import SubTitle from './Title';
 import data from '../assets/data.json';
 const useStyles = makeStyles((theme: Theme) => ({
   typeWrapper: {
-    padding: '1rem 0',
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   typeTitleWrapper: {
     textAlign: 'center',
