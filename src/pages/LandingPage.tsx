@@ -15,9 +15,8 @@ const LandingPage: React.FC = () => {
   return (
     <>
       <CssBaseline />
-      <header>
-        <NavBar />
-      </header>
+
+      <NavBar />
 
       <PortfolioLayout
         banner={<Banner />}

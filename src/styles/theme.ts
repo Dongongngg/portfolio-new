@@ -8,22 +8,22 @@ let theme: Theme = createMuiTheme({
   spacing: 8,
   palette: {
     text: {
-      primary: '#333',
+      primary: '#303030',
       secondary: '#787586',
-      disabled: 'rgba(255,255,255,.8)',
+      disabled: '#fff',
     },
     primary: {
-      main: '#A06C90',
-      light: '#636090',
+      main: '#989898',
+      light: '#B3B1C3',
     },
     secondary: {
-      main: '#5CB7B1',
-      light: '#C8FCEA',
+      main: '#8685EF',
+      light: '#F2ECFF',
     },
     divider: '#787586',
     background: {
       default: '#fff',
-      paper: '#f8f8f8',
+      paper: '#ededed',
     },
   },
   typography: {
@@ -43,20 +43,20 @@ let theme: Theme = createMuiTheme({
       },
     },
     h3: {
-      fontWeight: 500,
+      fontWeight: 400,
       marginBottom: '0.5rem',
       fontFamily: "'Roboto Slab', serif",
     },
     //  h4: 3rd title
-    h4: { fontWeight: 500, fontFamily: "'Catamaran', sans-serif" },
+    h4: { fontWeight: 400, fontFamily: "'Catamaran', sans-serif" },
     //  h5: card title or non-paper/card content, display as p
     h5: {
-      fontWeight: 500,
+      fontWeight: 400,
       lineHeight: 1.5,
       fontFamily: "'Catamaran', sans-serif",
     },
     //  h6: card sub-title
-    h6: { fontFamily: "'Catamaran', sans-serif" },
+    h6: { fontFamily: "'Catamaran', sans-serif", fontWeight: 400 },
     body1: { fontFamily: "'Catamaran', sans-serif" },
     body2: { fontFamily: "'Roboto Slab', serif" },
   },

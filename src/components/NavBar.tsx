@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 //mui
 import {
   Typography,
-  Container,
   AppBar,
   Toolbar,
   Hidden,
@@ -12,10 +11,12 @@ import {
   List,
   ListItem,
   ListItemIcon,
+  ListSubheader,
 } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 //icons
 import MenuIcon from '@material-ui/icons/Menu';
+import DescriptionIcon from '@material-ui/icons/Description';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -41,8 +42,16 @@ const drawerStyles = makeStyles((theme: Theme) => ({
   list: {
     width: 200,
   },
+  drawerTitle: {
+    color: theme.palette.text.disabled,
+    padding: theme.spacing(3),
+  },
   listItem: {
-    paddingLeft: theme.spacing(5),
+    color: theme.palette.text.disabled,
+    padding: theme.spacing(2),
+  },
+  listIcon: {
+    color: theme.palette.text.disabled,
   },
 }));
 
@@ -61,9 +70,9 @@ const NavDrawer: React.FC = () => {
   const classes = drawerStyles();
   return (
     <List className={classes.list}>
-      <ListItem>
+      <ListSubheader className={classes.drawerTitle}>
         <Typography variant='h5'>Jingfu Dong</Typography>
-      </ListItem>
+      </ListSubheader>
 
       <Divider />
       {naviItem.map((e, i) => (
@@ -73,7 +82,9 @@ const NavDrawer: React.FC = () => {
           onClick={() => scrollToId(e)}
           className={classes.listItem}
         >
-          {/* <ListItemIcon>e</ListItemIcon> */}
+          <ListItemIcon className={classes.listIcon}>
+            <DescriptionIcon />
+          </ListItemIcon>
           <Typography variant='button'>{e}</Typography>
         </ListItem>
       ))}
@@ -91,37 +102,35 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <Container maxWidth={false} className={classes.root}>
-      <AppBar position='fixed' className={classes.appBar} id='nav-bar'>
-        <Toolbar>
-          <Hidden smUp>
-            <MenuIcon onClick={toggleDrawer} />
-            <Drawer
-              anchor='left'
-              open={openNav}
-              onClose={toggleDrawer}
-              classes={{ paper: classes.drawerWrapper }}
-            >
-              <NavDrawer />
-            </Drawer>
-          </Hidden>
-          <Hidden xsDown>
-            <Typography
-              variant='h6'
-              className={classes.title}
-              onClick={() => scrollToId('about')}
-            >
-              Jingfu Dong
-            </Typography>
-            {naviItem.map(e => (
-              <Button key={e} color='inherit' onClick={() => scrollToId(e)}>
-                {e}
-              </Button>
-            ))}
-          </Hidden>
-        </Toolbar>
-      </AppBar>
-    </Container>
+    <AppBar position='fixed' className={classes.appBar} id='nav-bar'>
+      <Toolbar>
+        <Hidden smUp>
+          <MenuIcon onClick={toggleDrawer} />
+          <Drawer
+            anchor='left'
+            open={openNav}
+            onClose={toggleDrawer}
+            classes={{ paper: classes.drawerWrapper }}
+          >
+            <NavDrawer />
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown>
+          <Typography
+            variant='h6'
+            className={classes.title}
+            onClick={() => scrollToId('about')}
+          >
+            Jingfu Dong
+          </Typography>
+          {naviItem.map(e => (
+            <Button key={e} color='inherit' onClick={() => scrollToId(e)}>
+              {e}
+            </Button>
+          ))}
+        </Hidden>
+      </Toolbar>
+    </AppBar>
   );
 };
 

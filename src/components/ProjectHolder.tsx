@@ -13,12 +13,12 @@ import data from '../assets/data.json';
 const projectCardStyles = makeStyles((theme: Theme) => ({
   root: {
     padding: theme.spacing(2),
-    border: `2px solid ${theme.palette.primary.main}`,
+    border: `2px solid ${theme.palette.secondary.main}`,
     backgroundColor: theme.palette.background.default,
   },
   divider: { marginTop: theme.spacing(1), marginBottom: theme.spacing(2) },
   titleWrapper: { display: 'flex', flexWrap: 'wrap', alignItems: 'center' },
-  title: { fontWeight: 600 },
+  title: { fontWeight: 500 },
   titleIcon: {
     marginLeft: theme.spacing(1),
     marginBottom: 6,

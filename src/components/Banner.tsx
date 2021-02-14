@@ -74,14 +74,14 @@ const Banner: React.FC = () => {
               </Typography>
               <Grid container className={classes.logoWrapper}>
                 <GitHubIcon
-                  color='primary'
+                  color='secondary'
                   className={classes.socialLogo}
                   onClick={() => {
                     window.open('https://github.com/Dongongngg');
                   }}
                 />
                 <LinkedInIcon
-                  color='primary'
+                  color='secondary'
                   className={classes.socialLogo2}
                   onClick={() => {
                     window.open(
@@ -90,14 +90,14 @@ const Banner: React.FC = () => {
                   }}
                 />
                 <EmailIcon
-                  color='primary'
+                  color='secondary'
                   className={classes.socialLogo2}
                   onClick={() => {
                     window.open('mailto:jingfu.dong0320@gmail.com');
                   }}
                 />
                 <DescriptionIcon
-                  color='primary'
+                  color='secondary'
                   className={classes.socialLogo}
                   onClick={() => {
                     window.open('Resume_Jingfu_Dong.pdf');
