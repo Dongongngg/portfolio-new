@@ -10,32 +10,6 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 //data
 import data from '../assets/data.json';
 
-const projectCardStyles = makeStyles((theme: Theme) => ({
-  root: {
-    padding: theme.spacing(2),
-    border: `2px solid ${theme.palette.secondary.main}`,
-    backgroundColor: theme.palette.background.default,
-  },
-  divider: { marginTop: theme.spacing(1), marginBottom: theme.spacing(2) },
-  titleWrapper: { display: 'flex', flexWrap: 'wrap', alignItems: 'center' },
-  title: { fontWeight: 500 },
-  titleIcon: {
-    marginLeft: theme.spacing(1),
-    marginBottom: 6,
-    cursor: 'pointer',
-  },
-  descWrapper: {
-    listStyleType: 'circle !important',
-    paddingInlineStart: `${theme.spacing(2)}px !important`,
-  },
-  desc: {},
-
-  tech: {
-    '&:not(:last-child):after': {
-      content: '" - "',
-    },
-  },
-}));
 interface ProjectProps {
   title: string;
   desc: string[];
@@ -117,3 +91,30 @@ const ProjectHolder: React.FC = () => {
 };
 
 export default ProjectHolder;
+
+const projectCardStyles = makeStyles((theme: Theme) => ({
+  root: {
+    padding: theme.spacing(2),
+    border: `2px solid ${theme.palette.secondary.main}`,
+    backgroundColor: theme.palette.background.default,
+  },
+  divider: { marginTop: theme.spacing(1), marginBottom: theme.spacing(2) },
+  titleWrapper: { display: 'flex', flexWrap: 'wrap', alignItems: 'center' },
+  title: { fontWeight: 500 },
+  titleIcon: {
+    marginLeft: theme.spacing(1),
+    marginBottom: 6,
+    cursor: 'pointer',
+  },
+  descWrapper: {
+    listStyleType: 'circle !important',
+    paddingInlineStart: `${theme.spacing(2)}px !important`,
+  },
+  desc: {},
+
+  tech: {
+    '&:not(:last-child):after': {
+      content: '" - "',
+    },
+  },
+}));

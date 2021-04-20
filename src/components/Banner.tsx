@@ -10,48 +10,6 @@ import SchoolIcon from '@material-ui/icons/School';
 //assets
 import avatar from '../assets/img/avatar.png';
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {},
-  name: { fontFamily: "'Roboto Slab', serif" },
-  role: { color: theme.palette.text.secondary },
-  avatarWrapper: {
-    borderRight: `2px solid ${theme.palette.divider}`,
-    '@media(max-width:960px)': {
-      borderBottom: `2px solid ${theme.palette.divider}`,
-      borderRight: 'none',
-      paddingBottom: theme.spacing(4),
-    },
-  },
-  avatar: {
-    height: 250,
-    width: 250,
-    border: `4px solid ${theme.palette.secondary.main}`,
-    '@media(max-width:960px)': {
-      height: 200,
-      width: 200,
-      marginBottom: theme.spacing(4),
-    },
-    marginBottom: theme.spacing(8),
-  },
-  introWrapper: {
-    '@media(max-width:960px)': {
-      paddingTop: theme.spacing(4),
-    },
-  },
-  about: {
-    marginBottom: theme.spacing(2),
-  },
-  logoWrapper: {
-    paddingTop: theme.spacing(3),
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    alignItem: 'center',
-  },
-  socialLogo: { fontSize: '2.5rem', cursor: 'pointer' },
-  socialLogo2: { fontSize: '2.75rem', cursor: 'pointer' },
-  eduWrapper: { marginTop: theme.spacing(2) },
-}));
-
 const Banner: React.FC = () => {
   const classes = useStyles();
   return (
@@ -70,7 +28,7 @@ const Banner: React.FC = () => {
                 Jingfu Dong
               </Typography>
               <Typography variant='h5' className={classes.role}>
-                Junior full-stack developer
+                Full-stack developer
               </Typography>
               <Grid container className={classes.logoWrapper}>
                 <GitHubIcon
@@ -177,3 +135,45 @@ const Banner: React.FC = () => {
 };
 
 export default Banner;
+
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {},
+  name: { fontFamily: "'Roboto Slab', serif" },
+  role: { color: theme.palette.text.secondary },
+  avatarWrapper: {
+    borderRight: `2px solid ${theme.palette.divider}`,
+    '@media(max-width:960px)': {
+      borderBottom: `2px solid ${theme.palette.divider}`,
+      borderRight: 'none',
+      paddingBottom: theme.spacing(4),
+    },
+  },
+  avatar: {
+    height: 250,
+    width: 250,
+    border: `4px solid ${theme.palette.secondary.main}`,
+    '@media(max-width:960px)': {
+      height: 200,
+      width: 200,
+      marginBottom: theme.spacing(4),
+    },
+    marginBottom: theme.spacing(8),
+  },
+  introWrapper: {
+    '@media(max-width:960px)': {
+      paddingTop: theme.spacing(4),
+    },
+  },
+  about: {
+    marginBottom: theme.spacing(2),
+  },
+  logoWrapper: {
+    paddingTop: theme.spacing(3),
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItem: 'center',
+  },
+  socialLogo: { fontSize: '2.5rem', cursor: 'pointer' },
+  socialLogo2: { fontSize: '2.75rem', cursor: 'pointer' },
+  eduWrapper: { marginTop: theme.spacing(2) },
+}));

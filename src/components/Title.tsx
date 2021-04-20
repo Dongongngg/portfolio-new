@@ -2,14 +2,6 @@ import React from 'react';
 //mui
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    paddingBottom: theme.spacing(8),
-    '@media(max-width:960px)': {
-      paddingBottom: theme.spacing(2),
-    },
-  },
-}));
 
 interface MyProps {
   name: string;
@@ -25,3 +17,12 @@ const Title: React.FC<MyProps> = (props: MyProps) => {
 };
 
 export default Title;
+
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    paddingBottom: theme.spacing(8),
+    '@media(max-width:960px)': {
+      paddingBottom: theme.spacing(2),
+    },
+  },
+}));

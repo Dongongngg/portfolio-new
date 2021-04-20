@@ -7,26 +7,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import DescriptionIcon from '@material-ui/icons/Description';
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    backgroundColor: theme.palette.text.primary,
-    color: theme.palette.text.disabled,
-  },
-  navWrapper: {
-    paddingTop: theme.spacing(10),
-    '@media(max-width:960px)': { paddingTop: theme.spacing(5) },
-    paddingBottom: theme.spacing(5),
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  icon: { cursor: 'pointer' },
-  claim: {
-    '@media(max-width:960px)': {
-      textAlign: 'center',
-    },
-  },
-}));
+
 const Footer: React.FC = () => {
   const classes = useStyles();
   return (
@@ -67,7 +48,11 @@ const Footer: React.FC = () => {
       </Typography>
       <Typography variant='body1' align='right' className={classes.claim}>
         Design inspired by{' '}
-        <Typography component='a' href='https://manparvesh.com/'>
+        <Typography
+          component='a'
+          href='https://manparvesh.com/'
+          className={classes.claimName}
+        >
           Man Parvesh Singh Randhawa
         </Typography>
       </Typography>
@@ -76,3 +61,31 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    backgroundColor: theme.palette.text.primary,
+    color: theme.palette.text.disabled,
+  },
+  navWrapper: {
+    paddingTop: theme.spacing(10),
+    '@media(max-width:768px)': { paddingTop: theme.spacing(5) },
+    paddingBottom: theme.spacing(5),
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  icon: { cursor: 'pointer' },
+  claim: {
+    '@media(max-width:768px)': {
+      textAlign: 'center',
+      fontSize: '12px',
+    },
+  },
+
+  claimName: {
+    '@media(max-width:768px)': {
+      fontSize: '12px',
+    },
+  },
+}));

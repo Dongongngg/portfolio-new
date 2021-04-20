@@ -6,16 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 //components
 import Footer from '../components/Footer';
 
-const useStyles = makeStyles({
-  errorWrapper: {
-    minHeight: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-});
-
 const NotFoundPage: React.FC = () => {
   const classes = useStyles();
   return (
@@ -38,3 +28,13 @@ const NotFoundPage: React.FC = () => {
 };
 
 export default NotFoundPage;
+
+const useStyles = makeStyles({
+  errorWrapper: {
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+});
