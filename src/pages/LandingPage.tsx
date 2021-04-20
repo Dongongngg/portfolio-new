@@ -15,16 +15,13 @@ const LandingPage: React.FC = () => {
   return (
     <>
       <CssBaseline />
-
       <NavBar />
-
       <PortfolioLayout
         banner={<Banner />}
         skill={<SkillHolder />}
         work={<WorkExpHolder />}
         project={<ProjectHolder />}
       />
-
       <footer>
         <Footer />
       </footer>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 //mui
 import {
@@ -17,6 +18,91 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 //icons
 import MenuIcon from '@material-ui/icons/Menu';
 import DescriptionIcon from '@material-ui/icons/Description';
+
+const naviItem = ['about', 'skill', 'work', 'projects'];
+//scroll to location - height of navbar
+const scrollToId = (id: string) => {
+  const target = document.getElementById(id);
+  const navBar = document.getElementById('nav-bar');
+
+  if (target) {
+    const destination = target.offsetTop - (navBar?.offsetHeight || 0);
+    window.scroll({ top: destination, behavior: 'smooth' });
+  }
+};
+
+const NavDrawer: React.FC<any> = ({ handleToggle }) => {
+  const classes = drawerStyles();
+  return (
+    <List className={classes.list}>
+      <ListSubheader className={classes.drawerTitle}>
+        <Typography variant='h5'>Call me James :)</Typography>
+      </ListSubheader>
+
+      <Divider />
+      {naviItem.map((e, i) => (
+        <ListItem
+          button
+          key={i}
+          onClick={() => {
+            scrollToId(e);
+            handleToggle(false);
+          }}
+          className={classes.listItem}
+        >
+          <ListItemIcon className={classes.listIcon}>
+            <DescriptionIcon />
+          </ListItemIcon>
+          <Typography variant='button'>{e}</Typography>
+        </ListItem>
+      ))}
+    </List>
+  );
+};
+
+const NavBar: React.FC = () => {
+  const classes = useStyles();
+
+  const [openNav, setOpenNav] = useState<boolean>(false);
+
+  const toggleDrawer = () => {
+    setOpenNav(!openNav);
+  };
+
+  return (
+    <AppBar position='fixed' className={classes.appBar} id='nav-bar'>
+      <Toolbar>
+        <Hidden smUp>
+          <MenuIcon onClick={toggleDrawer} />
+          <Drawer
+            anchor='left'
+            open={openNav}
+            onClose={toggleDrawer}
+            classes={{ paper: classes.drawerWrapper }}
+          >
+            <NavDrawer handleToggle={setOpenNav} />
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown>
+          <Typography
+            variant='h6'
+            className={classes.title}
+            onClick={() => scrollToId('about')}
+          >
+            Jingfu Dong
+          </Typography>
+          {naviItem.map(e => (
+            <Button key={e} color='inherit' onClick={() => scrollToId(e)}>
+              {e}
+            </Button>
+          ))}
+        </Hidden>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default NavBar;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -54,84 +140,3 @@ const drawerStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.text.disabled,
   },
 }));
-
-const naviItem = ['about', 'skill', 'work', 'projects'];
-//scroll to location - height of navbar
-const scrollToId = (props: string) => {
-  const target = document.getElementById(props);
-  const navBar = document.getElementById('nav-bar');
-
-  if (target) {
-    const destination = target.offsetTop - (navBar?.offsetHeight || 0);
-    window.scroll({ top: destination, behavior: 'smooth' });
-  }
-};
-const NavDrawer: React.FC = () => {
-  const classes = drawerStyles();
-  return (
-    <List className={classes.list}>
-      <ListSubheader className={classes.drawerTitle}>
-        <Typography variant='h5'>Jingfu Dong</Typography>
-      </ListSubheader>
-
-      <Divider />
-      {naviItem.map((e, i) => (
-        <ListItem
-          button
-          key={i}
-          onClick={() => scrollToId(e)}
-          className={classes.listItem}
-        >
-          <ListItemIcon className={classes.listIcon}>
-            <DescriptionIcon />
-          </ListItemIcon>
-          <Typography variant='button'>{e}</Typography>
-        </ListItem>
-      ))}
-    </List>
-  );
-};
-
-const NavBar: React.FC = () => {
-  const classes = useStyles();
-
-  const [openNav, setOpenNav] = useState<boolean>(false);
-
-  const toggleDrawer = () => {
-    setOpenNav(!openNav);
-  };
-
-  return (
-    <AppBar position='fixed' className={classes.appBar} id='nav-bar'>
-      <Toolbar>
-        <Hidden smUp>
-          <MenuIcon onClick={toggleDrawer} />
-          <Drawer
-            anchor='left'
-            open={openNav}
-            onClose={toggleDrawer}
-            classes={{ paper: classes.drawerWrapper }}
-          >
-            <NavDrawer />
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown>
-          <Typography
-            variant='h6'
-            className={classes.title}
-            onClick={() => scrollToId('about')}
-          >
-            Jingfu Dong
-          </Typography>
-          {naviItem.map(e => (
-            <Button key={e} color='inherit' onClick={() => scrollToId(e)}>
-              {e}
-            </Button>
-          ))}
-        </Hidden>
-      </Toolbar>
-    </AppBar>
-  );
-};
-
-export default NavBar;

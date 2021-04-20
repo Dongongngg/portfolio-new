@@ -16,38 +16,6 @@ import SubTitle from './Title';
 //data
 import data from '../assets/data.json';
 
-const timeLineStyles = makeStyles(theme => ({
-  root: {
-    padding: `${theme.spacing(2)}px ${theme.spacing(3)}px`,
-    '@media(max-width:960px)': { padding: `${theme.spacing(2)}px 0` },
-  },
-  title: { fontWeight: 500 },
-  desc: {
-    marginTop: '0.5rem !important',
-    listStyleType: 'circle !important',
-    paddingInlineStart: '1rem !important',
-  },
-  contentWrapper: { padding: '10px 16px' },
-  dot: { padding: '0.5vw' },
-  connector: { backgroundColor: theme.palette.divider },
-}));
-
-const TimeLineItemFluid = withStyles({
-  missingOppositeContent: {
-    '&:before': {
-      display: 'none',
-    },
-  },
-})(TimelineItem);
-
-const MyPaper = withStyles((theme: Theme) => ({
-  root: {
-    padding: theme.spacing(2),
-    border: `2px solid ${theme.palette.secondary.main}`,
-    backgroundColor: theme.palette.background.default,
-  },
-}))(Paper);
-
 interface MyTimeLineProps {
   title: string;
   company?: string;
@@ -120,3 +88,35 @@ const WorkExpHolder: React.FC = () => {
 };
 
 export default WorkExpHolder;
+
+const timeLineStyles = makeStyles(theme => ({
+  root: {
+    padding: `${theme.spacing(2)}px ${theme.spacing(3)}px`,
+    '@media(max-width:960px)': { padding: `${theme.spacing(2)}px 0` },
+  },
+  title: { fontWeight: 500 },
+  desc: {
+    marginTop: '0.5rem !important',
+    listStyleType: 'circle !important',
+    paddingInlineStart: '1rem !important',
+  },
+  contentWrapper: { padding: '10px 16px' },
+  dot: { padding: '0.5vw' },
+  connector: { backgroundColor: theme.palette.divider },
+}));
+
+const TimeLineItemFluid = withStyles({
+  missingOppositeContent: {
+    '&:before': {
+      display: 'none',
+    },
+  },
+})(TimelineItem);
+
+const MyPaper = withStyles((theme: Theme) => ({
+  root: {
+    padding: theme.spacing(2),
+    border: `2px solid ${theme.palette.secondary.main}`,
+    backgroundColor: theme.palette.background.default,
+  },
+}))(Paper);
